@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<!-- Just to make it look a little nice -->
+    	<style>
+			table {
+			  font-family: arial, sans-serif;
+			  border-collapse: collapse;
+			  width: 100%;
+			}
+
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			  background-color: #dddddd;
+			}
+		</style>
+        <title>Top 30 Jobs</title>
+    </head>
+
+    <body>
+    	<!-- Displays a table of jobs from the imported list -->
+		<table>
+	        {% for job in job_list %}
+	            <tr>
+	            	{% for info in job %}
+		                <td>{{ info }}</td>
+		            {% endfor %}
+	            </tr>
+	        {% endfor %}
+	    </table>
+	</body>
+</html>
