@@ -12,6 +12,13 @@
     </head>
     <body class="font-sans antialiased bg-gray-50 text-gray-900">
         <main>
+            <button
+                onclick="topFunction()"
+                id="topBtn"
+                title="Go to top"
+                class=" w-full px-8 py-3.5 transition duration-300 bg-blue-500 hover:bg-blue-600 shadow text-white font-semibold rounded-lg sm:w-auto " >
+                Top
+            </button>
             <div class="bg-100vw bg-no-repeat bg-right-bottom xl:bg-bottom pb-20"
                 style="background-image: linear-gradient(to bottom, 
                       rgba(255,255,255,1) 10%,
@@ -19,19 +26,19 @@
 
                       rgba(0,0,0,0)), url('static/background.jpg');" >
                 <!-- Start Hero Block -->
-                <div class="container mx-auto px-5 pb-16 sm:pb-16 lg:pb-24 xl:pb-32">
+                <div class="container mx-auto px-5 pb-16 sm:pb-16 lg:pb-24 xl:pb-32" id="home">
                     <header class="flex justify-between items-center pt-5">
                         <div>
                             <a href="#0" class="" ><img src="../static/spartalogo.png" alt="" width="120em" height="100em" /></a>
                         </div>
                         <div class="hidden space-x-8 font-medium lg:block">
                             <a
-                                href="#0"
+                                href="#home"
                                 class="hover:text-blue-600 transition-colors duration-300"
                                 >Home</a
                             >
                             <a
-                                href="#0"
+                                href="#team"
                                 class="hover:text-blue-600 transition-colors duration-300"
                                 >About</a
                             >
@@ -101,13 +108,12 @@
 
         <section class="bg-gray-100 py-12 lg:py-16 xl:py-28">
             <!-- Start Our Team Block -->
-            <div class="container mx-auto px-5">
+            <div class="container mx-auto px-5" id="team">
                 <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
                     <div class="space-y-2 lg:space-y-4">
                         <h2 class="text-2xl font-black sm:text-3xl">Our team</h2>
                         <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">
-                            Minus accusantium nesciunt accusamus et pariatur nobis
-                            perferendis.
+                         Our amazing team, doing an amazing job.
                         </p>
                     </div>
                     <div class=" grid gap-6 grid-cols-2 md:grid-cols-4 lg:gap-10 xl:col-span-2 " >
@@ -157,5 +163,7 @@
         <!-- End Our Team Block -->
 
         {% block body%} {% endblock %}
+
+        <script type="text/javascript" src="../static/styles/index.js"></script>
     </body>
 </html>
