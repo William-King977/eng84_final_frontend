@@ -11,5 +11,7 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN python -m pip install -r requirements.txt
 
-# Make migrations, then run the application
+EXPOSE 8000
+
+# Run the application
 CMD ["python", "app.py"]

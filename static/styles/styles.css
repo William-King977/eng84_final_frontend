@@ -653,6 +653,9 @@ video {
 .bg-right-top {
   background-position: right top;
 }
+.bg-right-bottom {
+  background-position: right bottom;
+}
 
 .bg-no-repeat {
   background-repeat: no-repeat;
