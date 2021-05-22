@@ -6,17 +6,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # with open('static/ItJobsWatchTop30.csv', newline='') as f:
-    #     reader = csv.reader(f)
-    #     top30_jobs_list = list(reader)
-    # return render_template("home.html", job_list=top30_jobs_list)
     # Include team member names and teams
     context = {
             "front": [
                 {
                     "name": "Alexis Othonos",
                     "src": "static/team/alexis.jpg",
-                    "role": "Frontend Scrum master",
+                    "role": "Frontend Scrum Master",
                 },
                 {
                     "name": "Ula Ziolko",
@@ -39,7 +35,7 @@ def index():
                 {
                     "name": "Ben Ranson",
                     "src": "static/team/ben.jpg",
-                    "role": "Automation Scrum master",
+                    "role": "Automation Scrum Master",
                 },
                 {
                     "name": "Saverio Cutrupi",
@@ -78,7 +74,12 @@ def index():
                 ]
             }
 
-    return render_template('home.html', context=context )
+    # Import the CSV and convert it into a list of dictionaries
+    # with open('static/ItJobsWatchTop30.csv', newline='') as f:
+    #     reader = csv.DictReader(f, delimiter=',')
+    #     top30_jobs_list = list(reader)
+    # return render_template("top30-test.html", job_list=top30_jobs_list, context=context)
+    return render_template('home.html', context=context)
 
 
 @app.route("/meet_team")
@@ -94,9 +95,9 @@ def data():
 # Remove once Top 30 Jobs table has been added to base.html
 @app.route("/top30-test")
 def collect_data():
-    # Import the CSV and convert it into a list
+    # Import the CSV and convert it into a list of dictionaries
     with open('static/ItJobsWatchTop30.csv', newline='') as f:
-        reader = csv.reader(f)
+        reader = csv.DictReader(f, delimiter=',')
         top30_jobs_list = list(reader)
 
     return render_template("top30-test.html", job_list=top30_jobs_list)
