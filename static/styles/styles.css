@@ -664,6 +664,9 @@ video {
 .bg-cover {
   background-size: cover;
 }
+.bg-100vw{
+  background-size: 100vw;
+}
 
 .border-gray-200 {
   --tw-border-opacity: 1;
@@ -888,6 +891,10 @@ video {
 
 .pb-16 {
   padding-bottom: 4rem;
+}
+
+.pb-20{
+    padding-bottom: calc(5rem + 10vw);
 }
 
 .absolute {
@@ -1260,6 +1267,9 @@ video {
 
   .xl\:bg-bottom {
     background-position: bottom;
+  }
+  .xl\:bg-top{
+    background-position: top;
   }
 
   .xl\:mt-28 {
