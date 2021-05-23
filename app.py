@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from s3_boto3 import download_s3_file
 import csv
 
 app = Flask(__name__)
@@ -74,11 +75,7 @@ def index():
                 ]
             }
 
-    # Import the CSV and convert it into a list of dictionaries
-    # with open('static/ItJobsWatchTop30.csv', newline='') as f:
-    #     reader = csv.DictReader(f, delimiter=',')
-    #     top30_jobs_list = list(reader)
-    # return render_template("top30-test.html", job_list=top30_jobs_list, context=context)
+    # return render_template("home.html", job_list=collect_data(), context=context)
     return render_template('home.html', context=context)
 
 
@@ -92,15 +89,31 @@ def data():
     return "IT JOB WATCH!"
 
 
-# Remove once Top 30 Jobs table has been added to base.html
-@app.route("/top30-test")
+@app.route("/top30-test") # Remove this line once Top 30 Jobs table has been added to base.html
 def collect_data():
-    # Import the CSV and convert it into a list of dictionaries
-    with open('static/ItJobsWatchTop30.csv', newline='') as f:
-        reader = csv.DictReader(f, delimiter=',')
-        top30_jobs_list = list(reader)
+    jobs_filename = "ItJobsWatchTop30.csv"
+    s3_file_path = jobs_filename # location on S3
+    local_file_path = jobs_filename # location to download the file to
 
-    return render_template("top30-test.html", job_list=top30_jobs_list)
+    # Fetch the CSV file from S3
+    try:
+        download_s3_file(jobs_filename, s3_file_path, local_file_path)
+    except:
+        # return f"{jobs_filename} cannot be located in the S3 bucket path: {s3_file_path}, or your local file path cannot be located: {local_file_path}."
+        return render_template("top30-test.html", job_list=f"{jobs_filename} cannot be located in the S3 bucket path: {s3_file_path}, or your local file path cannot be located: {local_file_path}.") # Remove this
+
+    # Fetching the downloaded CSV file
+    try:
+        # Import the CSV and convert it into a list of dictionaries
+        with open(local_file_path, newline='') as f:
+            reader = csv.DictReader(f, delimiter=',')
+            top30_jobs_list = list(reader)
+
+        # return top30_jobs_list
+        return render_template("top30-test.html", job_list=top30_jobs_list) # Remove this too
+	except:
+        # return f"{jobs_filename} cannot be located on your local machine path: {local_file_path}."
+        return render_template("top30-test.html", job_list=f"{jobs_filename} cannot be located on your local machine path: {local_file_path}.") # Remove this too
 
 
 if __name__ == "__main__":
