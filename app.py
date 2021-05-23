@@ -111,7 +111,7 @@ def collect_data():
 
         # return top30_jobs_list
         return render_template("top30-test.html", job_list=top30_jobs_list) # Remove this too
-	except:
+    except:
         # return f"{jobs_filename} cannot be located on your local machine path: {local_file_path}."
         return render_template("top30-test.html", job_list=f"{jobs_filename} cannot be located on your local machine path: {local_file_path}.") # Remove this too
 
