@@ -25,21 +25,28 @@
     <body>
         <!-- Displays a table of jobs from the imported list of dictionaries -->
         <table>
-            <tr>
-                <!-- display the column names -->
-                {% for key in job_list[0].keys() %}
-                    <th>{{ key }}</th>
-                {% endfor %}
-            </tr>
+            <!-- display the error message if it's a string -->
+            {% if job_list is string %}
+                <tr>{{ job_list }} </tr>
 
-            <!-- display the information -->
-            {% for job in job_list %}
+            <!-- display the jobs if there are no errors -->
+            {% else %}
                 <tr>
-                    {% for info in job.values() %}
-                        <td>{{ info }}</td>
+                    <!-- display the column names -->
+                    {% for key in job_list[0].keys() %}
+                        <th>{{ key }}</th>
                     {% endfor %}
                 </tr>
-            {% endfor %}
+
+                <!-- display the information -->
+                {% for job in job_list %}
+                    <tr>
+                        {% for info in job.values() %}
+                            <td>{{ info }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            {% endif %}
         </table>
     </body>
 </html>
