@@ -20,7 +20,8 @@ def meet_team():
 
 @app.route("/data")
 def data():
-    return "IT JOB WATCH!"
+	return render_template('top30.html')
+    # return "IT JOB WATCH!"
 
 
 # Remove once Top 30 Jobs table has been added to base.html
