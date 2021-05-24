@@ -4,7 +4,7 @@
 
 ## Introduction
 The aim of this project is to create a simple service that can scrape useful data from ITJobswatch website and display the current top 30 jobs.
-Our app is created with Flask microframework and is divided into three sections:
+The app is written in Python 3 with Flask microframework. We decided to create one-page website which is divided into three sections:
 - Home
 - Our Team
 - Top 30 Jobs
@@ -26,6 +26,10 @@ python app.py
 The above command will run a localhost server on port 8000 on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
 
 
+## Styles and libraries
+- Style formatting has been added to the HTML structure using CSS and JS. 
+- Jinja2 template library
+
 ## Environment variables
 The application tries to get a data file from an S3 bucket. To get the data, the `boto3` module is used. However, the module requires some environment variables to be set in order to work correctly. Specifically:
 - `AWS_ACCESS_KEY_ID`: Access key for AWS IAM role
@@ -33,3 +37,21 @@ The application tries to get a data file from an S3 bucket. To get the data, the
 - `AWS_BUCKET`: Name of bucket in S3
 - `AWS_REGION`: Region of S3 bucket
 - `FILEPATH_JOBS`: Path of file in bucket
+
+
+## Main functionality
+
+Environment variable credentials were used to connect to S3 
+```
+s3 = boto3.client(
+    's3',
+    aws_access_key_id=AWS_ACCESS,
+    aws_secret_access_key=AWS_SECRET,
+)
+```
+
+Part of the script from `app.py` To collect data from the Aamazon S3 bucket. 
+```
+    data = s3_boto3.collect_data()
+    return render_template("home.html", context=context, data=data)  
+```
