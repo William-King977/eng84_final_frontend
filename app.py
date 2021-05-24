@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import s3_boto3
+import data_collector
 import team
 
 # Set as variables so that they can be easily changed
@@ -17,7 +17,7 @@ def index():
     context = team.team
 
     # Fetch the data from S3
-    data = s3_boto3.collect_data()
+    data = data_collector.collect_data_url()
     return render_template("home.html", context=context, data=data)
 
 
