@@ -4,43 +4,71 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="static/favicon.jpg" />
-        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="../static/favicon.png" />
+        <link
+            href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="assets/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}" />
-        <title>SpartaGlobal Engineering84 Final Project</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ url_for('static',filename='styles/styles.css') }}"
+        />
+        <title>Eng84_final_project</title>
     </head>
     <body class="font-sans antialiased bg-gray-50 text-gray-900">
         <main>
-            <button
-                onclick="topFunction()"
-                id="topBtn"
-                title="Go to top"
-                class=" w-full px-8 py-3.5 transition duration-300 bg-blue-500 hover:bg-blue-600 shadow text-white font-semibold rounded-lg sm:w-auto " >
-                Top
-            </button>
-            <div class="bg-100vw bg-no-repeat bg-right-bottom xl:bg-bottom pb-20"
-                style="background-image: linear-gradient(to bottom, 
-                      rgba(255,255,255,1) 10%,
-                      rgba(255,255,255,0.8) 30%,
-
-                      rgba(0,0,0,0)), url('static/background.jpg');" >
+            <div
+                class="bg-cover bg-no-repeat bg-right-bottom xl:bg-bottom"
+                style="background-image:
+                linear-gradient(to bottom, rgba(255,255,255,1) 10%, rgba(0,0,0,0)), url('../static/background.jpg');"
+            >
                 <!-- Start Hero Block -->
-                <div class="container mx-auto px-5 pb-16 sm:pb-16 lg:pb-24 xl:pb-32" id="home">
+                <div class="container mx-auto px-5 pb-16 sm:pb-16 lg:pb-24 xl:pb-32">
                     <header class="flex justify-between items-center pt-5">
                         <div>
-                            <a href="#0" class="" ><img src="../static/spartalogo.png" alt="" width="120em" height="100em" /></a>
+                            <a href="#0" class=""
+                                ><img
+                                    src="../static/spartalogo.png"
+                                    alt=""
+                                    width="120em"
+                                    height="100em"
+                            /></a>
                         </div>
                         <div class="hidden space-x-8 font-medium lg:block">
-                            <a href="#home" class="hover:text-blue-600 transition-colors duration-300">Home</a>
-                            <a href="#team" class="hover:text-blue-600 transition-colors duration-300">About</a>
-                            <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Top 30 IT Jobs</a>
+                            <a
+                                href="#0"
+                                class="hover:text-blue-600 transition-colors duration-300"
+                                >Home</a
+                            >
+                            <a
+                                href="#team"
+                                class="hover:text-blue-600 transition-colors duration-300"
+                                >The Team</a
+                            >
+                            <a
+                                href="#jobs"
+                                class="hover:text-blue-600 transition-colors duration-300"
+                                >Top 30</a
+                            >
                         </div>
                         <div class="hidden font-medium lg:block">
-                            <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Something else</a>
+                            <a
+                                href="#0"
+                                class="hover:text-blue-600 transition-colors duration-300"
+                                >Something else</a
+                            >
                         </div>
                         <div class="block lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-8 w-8"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -52,13 +80,21 @@
                     </header>
                     <div class="mt-16 space-y-8 lg:mt-24 xl:mt-28">
                         <div class="space-y-4">
-                          <br>
-                          <br>
-                            <h1 class=" text-3xl font-black sm:w-2/3 sm:text-4xl md:max-w-xl md:text-5xl " >
-                              DevOps Stream Final Project
+                            <h1
+                                class="
+                                    text-3xl
+                                    font-black
+                                    sm:w-2/3
+                                    sm:text-4xl
+                                    md:max-w-xl
+                                    md:text-5xl
+                                "
+                            >
+                                Free landing page template for your next services startup
                             </h1>
                             <p class="max-w-sm text-lg text-gray-700 md:max-w-md md:text-xl">
-                              A fully automated deployment
+                                Rerum provident aut quibusdam doloremque officiis iusto quia
+                                molestiae.
                             </p>
                         </div>
                         <button
@@ -75,62 +111,242 @@
                                 font-semibold
                                 rounded-lg
                                 sm:w-auto
-                            " >
+                            "
+                        >
                             View our services
                         </button>
                     </div>
                 </div>
             </div>
         </main>
-
         <section class="bg-gray-100 py-12 lg:py-16 xl:py-28">
             <!-- Start Our Team Block -->
-            <div class="container mx-auto px-5" id="team">
+            <div id="team" class="container mx-auto px-5">
                 <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
                     <div class="space-y-2 lg:space-y-4">
                         <h2 class="text-2xl font-black sm:text-3xl">Our team</h2>
                         <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">
-                         Our amazing team, doing an amazing job.
+                            Minus accusantium nesciunt accusamus et pariatur nobis
+                            perferendis.
                         </p>
                     </div>
-                    <div class=" grid gap-6 grid-cols-2 md:grid-cols-4 lg:gap-10 xl:col-span-2 " >
-                            {% for member in context.front %}
-                              <div class="space-y-5">
-                                <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                                    src= {{member.src}} alt="Team Member 1"/>
-                                <div class="space-y-1">
-                                  <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
-                                  <p class="text-gray-600">{{member.role}}</p>
-                                </div>
-                              </div>
-
-                            {% endfor %}
-
-                            {% for member in context.auto %}
-                              <div class="space-y-5">
-                                <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                                    src= {{member.src}} alt="Team Member 1"/>
-                                <div class="space-y-1">
-                                  <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
-                                  <p class="text-gray-600">{{member.role}}</p>
-                                </div>
-                              </div>
-
-                            {% endfor %}
-
-                            {% for member in context.test %}
-                              <div class="space-y-5">
-                                <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                                    src= {{member.src}} alt="Team Member 1"/>
-                                <div class="space-y-1">
-                                  <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
-                                  <p class="text-gray-600">{{member.role}}</p>
-                                </div>
-                              </div>
-
-                            {% endfor %}
-
-
+                    <div
+                        class="
+                            grid
+                            gap-6
+                            grid-cols-2
+                            md:grid-cols-4
+                            lg:gap-10
+                            xl:col-span-2
+                        "
+                    >
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/oleg.jpeg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Oleg Negruta</h4>
+                                <p class="text-gray-600">Front-end</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/will.jpeg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">William King</h4>
+                                <p class="text-gray-600">Front-end</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/savi.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Saverio Cutrupi</h4>
+                                <p class="text-gray-600">Automation</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/jordan.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Jordan Clarke</h4>
+                                <p class="text-gray-600">Tester</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/jose.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Jose Torres</h4>
+                                <p class="text-gray-600">Tester</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/ula.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Ula Ziolko</h4>
+                                <p class="text-gray-600">Front-end</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/isobel.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Isobel Fitt-Conway</h4>
+                                <p class="text-gray-600">Automation</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/arun.jpeg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Arun Panesar</h4>
+                                <p class="text-gray-600">Tester</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/alexis.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Alexis Othonos</h4>
+                                <p class="text-gray-600">Front-end</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/ben.jpg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Benjamin Ranson</h4>
+                                <p class="text-gray-600">Automation</p>
+                            </div>
+                        </div>
+                        <!-- End Team Member Box -->
+                        <div class="space-y-5">
+                            <!-- Start Team Member Box -->
+                            <img
+                                class="
+                                    rounded-xl
+                                    shadow
+                                    transition-shadow
+                                    duration-200
+                                    hover:shadow-lg
+                                "
+                                src="../static/team/andrew.jpeg"
+                                alt="Team Member 1"
+                            />
+                            <div class="space-y-1">
+                                <h4 class="font-medium lg:text-lg">Andrew Asare</h4>
+                                <p class="text-gray-600">Automation</p>
+                            </div>
                         </div>
                         <!-- End Team Member Box -->
                     </div>
@@ -139,8 +355,323 @@
         </section>
         <!-- End Our Team Block -->
 
-        {% block body%} {% endblock %}
+        <section class="py-12 lg:py-16 xl:py-28"><!-- Start Top 30 Jobs Block -->
+            <div id="jobs" class="container mx-auto px-5">
+                <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
+                    <div class="space-y-2 lg:space-y-4">
+                        <h2  id class="text-2xl font-black sm:text-3xl">Top 30 Jobs from ITJobsWatch website. </h2>
+                        <p  class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>
+                        <a href="#0" class="block text-blue-500 transition duration-200 hover:text-blue-600 md:text-lg">https://www.itjobswatch.co.uk/</a>
+                    </div>
+                    <div class="flex flex-col space-y-5 xl:col-span-2">
+                        <div class="bg-white p-5 rounded-xl shadow space-y-2 cursor-pointer transition duration-200 hover:shadow-lg hover:text-blue-600 md:p-8"><!-- Start Question -->
+                            <div class="flex justify-between items-center">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Skill / Job Role</th>
+                                      <th scope="col">Rank(Last 6 Months)</th>
+                                      <th scope="col">Rank(Last Year)</th>
+                                      <th scope="col">Median Salary</th>
+                                        <th scope="col">Median Salary</th>
+                                        <th scope="col">Historical Job Ads</th>
+                                        <th scope="col">Job Vacancies</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                        <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                        <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                        <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">4</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">5</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">6</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">7</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">8</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">9</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">10</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+<!--                                  start rows 11-20-->
+                                    <tr>
+                                      <th scope="row">11</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">12</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                        <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">13</th>
+                                      <td>Larry</td>
+                                      <td>the</td>
+                                      <td>@twitter</td>
+                                        <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">14</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">15</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">16</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">17</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">18</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">19</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">20</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+<!--                                  rows 21-30-->
+                                    <tr>
+                                      <th scope="row">21</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                      <td>@mdo</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">22</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                      <td>@</td>
+                                        <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">23</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                        <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">24</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">25</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">26</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">27</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">28</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">29</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">30</th>
+                                      <td>Larry</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
+                                      <td>@twitter</td>
+                                      <td>the </td>
+                                      <td>@twitter</td>
 
-        <script type="text/javascript" src="../static/styles/index.js"></script>
+                                    </tr>
+                                  </tbody>
+                                </table>
+<!--                                <h4 class="font-medium mr-4">Ea numquam aut harum vero et quia expedita et?</h4>-->
+                                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></span>
+                            </div>
+                        </div><!-- End Question -->
+<!--                        <div class="bg-white p-5 rounded-xl shadow-lg space-y-2 cursor-pointer transition duration-200 hover:shadow hover:text-blue-600 md:p-8">&lt;!&ndash; Start Question &ndash;&gt;-->
+<!--                            <div class="flex justify-between items-center mb-4">-->
+<!--                                <h4 class="font-medium mr-4">Lusto laboriosam provident voluptas soluta ipsum nemo molestias?</h4>-->
+<!--                                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></span>-->
+<!--                            </div>-->
+<!--                            <p class="text-gray-600">-->
+<!--                                Sed similique non voluptates doloremque aut aut facilis. Aspernatur tempora libero possimus ut non voluptates deleniti rerum. Quasi nulla consectetur rerum eum sed modi tempora dolorem. Voluptas eos qui voluptatem et. Expedita aliquid illo eligendi.-->
+<!--                            </p>-->
+
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Top 30 Jobs  Block -->
+
+        {% block body%} {% endblock %}
     </body>
 </html>

@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 # import s3_boto3
-from s3_boto3 import download_s3_file
+# from s3_boto3 import download_s3_file
 import csv
 import team
 
@@ -23,7 +23,8 @@ def index():
 
 @app.route("/data")
 def data():
-    return "IT JOB WATCH!"
+	return render_template('top30.html')
+    # return "IT JOB WATCH!"
 
 
 @app.route("/top30-test")  # Remove this line once Top 30 Jobs table has been added to base.html
