@@ -17,7 +17,7 @@ s3 = boto3.client(
     aws_secret_access_key=AWS_SECRET,
 )
 
-# bucket_name = "eng84-william-s3"  # needs to change
+# bucket_name = "eng84-final-project"  # needs to change
 # region = "eu-west-1"
 
 
@@ -44,10 +44,11 @@ def collect_data():
     except (TypeError, botocore.exceptions.ClientError):
         print(f"{jobs_filename} can't be located in the S3 bucket or credentials failed. Using local file.")
     finally:
+    	# Fetches the Top 30 Jobs from the local CSV file
         try:
             with open(jobs_filename, newline='', encoding='ISO-8859-1') as f:
                 reader = csv.reader(f, delimiter=',')
-                context = list(reader)
+                context = list(reader)[0:30]
         # File cannot be located in the local file path
         except FileNotFoundError:
             print('Local file not found.')
