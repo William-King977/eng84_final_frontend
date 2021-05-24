@@ -35,8 +35,10 @@ Use a more readable tab size (opinionated).
 */
 
 html {
-	line-height: 1.15; /* 1 */
-	-webkit-text-size-adjust: 100%; /* 2 */
+	line-height: 1.15;
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
 	scroll-behavior: smooth;
 }
 
@@ -59,7 +61,8 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 
 body {
 	font-family: system-ui, -apple-system,
-		/* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto,
+		/* Firefox supports this but not yet `system-ui` */
+		'Segoe UI', Roboto,
 		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
@@ -74,8 +77,10 @@ Grouping content
 */
 
 hr {
-	height: 0; /* 1 */
-	color: inherit; /* 2 */
+	height: 0;
+	/* 1 */
+	color: inherit;
+	/* 2 */
 }
 
 /*
@@ -111,8 +116,10 @@ kbd,
 samp,
 pre {
 	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
-		monospace; /* 1 */
-	font-size: 1em; /* 2 */
+		monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
 }
 
 /**
@@ -154,8 +161,10 @@ Tabular data
 */
 
 table {
-	text-indent: 0; /* 1 */
-	border-color: inherit; /* 2 */
+	text-indent: 0;
+	/* 1 */
+	border-color: inherit;
+	/* 2 */
 }
 
 /*
@@ -173,10 +182,14 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */
 }
 
 /**
@@ -327,8 +340,10 @@ ul {
 html {
 	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
-	line-height: 1.5; /* 2 */
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	/* 1 */
+	line-height: 1.5;
+	/* 2 */
 }
 
 /**
@@ -370,10 +385,14 @@ body {
 *,
 ::before,
 ::after {
-	box-sizing: border-box; /* 1 */
-	border-width: 0; /* 2 */
-	border-style: solid; /* 2 */
-	border-color: #e5e7eb; /* 2 */
+	box-sizing: border-box;
+	/* 1 */
+	border-width: 0;
+	/* 2 */
+	border-style: solid;
+	/* 2 */
+	border-color: #e5e7eb;
+	/* 2 */
 }
 
 /*
@@ -548,67 +567,67 @@ video {
 	}
 }
 
-.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+.space-y-1> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-2> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+.space-x-3> :not([hidden])~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(0.75rem * var(--tw-space-x-reverse));
 	margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+.space-y-4> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-5> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+.space-x-5> :not([hidden])~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
 	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+.space-y-8> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.space-x-8 > :not([hidden]) ~ :not([hidden]) {
+.space-x-8> :not([hidden])~ :not([hidden]) {
 	--tw-space-x-reverse: 0;
 	margin-right: calc(2rem * var(--tw-space-x-reverse));
 	margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+.space-y-10> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-1\.5> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
 }
 
-.space-y-2\.5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-2\.5> :not([hidden])~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(0.625rem * var(--tw-space-y-reverse));
@@ -648,6 +667,7 @@ video {
 .bg-right-top {
 	background-position: right top;
 }
+
 .bg-right-bottom {
 	background-position: right bottom;
 }
@@ -659,8 +679,9 @@ video {
 .bg-cover {
 	background-size: cover;
 }
-.bg-100vw{
-  background-size: 100vw;
+
+.bg-100vw {
+	background-size: 100vw;
 }
 
 .border-gray-200 {
@@ -890,8 +911,8 @@ video {
 	padding-bottom: 4rem;
 }
 
-.pb-20{
-    padding-bottom: calc(5rem + 10vw);
+.pb-20 {
+	padding-bottom: calc(5rem + 10vw);
 }
 
 .absolute {
@@ -943,7 +964,10 @@ video {
 }
 
 * {
-	--tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+	--tw-ring-inset: var(--tw-empty,
+			/*!*/
+			/*!*/
+		);
 	--tw-ring-offset-width: 0px;
 	--tw-ring-offset-color: #fff;
 	--tw-ring-color: rgba(59, 130, 246, 0.5);
@@ -952,10 +976,8 @@ video {
 }
 
 .focus\:ring:focus {
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-		var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-		calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
 	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
 		var(--tw-shadow, 0 0 #0000);
 }
@@ -1083,6 +1105,7 @@ video {
 }
 
 @-webkit-keyframes ping {
+
 	75%,
 	100% {
 		transform: scale(2);
@@ -1091,6 +1114,7 @@ video {
 }
 
 @keyframes ping {
+
 	75%,
 	100% {
 		transform: scale(2);
@@ -1111,6 +1135,7 @@ video {
 }
 
 @-webkit-keyframes bounce {
+
 	0%,
 	100% {
 		transform: translateY(-25%);
@@ -1126,6 +1151,7 @@ video {
 }
 
 @keyframes bounce {
+
 	0%,
 	100% {
 		transform: translateY(-25%);
@@ -1141,7 +1167,7 @@ video {
 }
 
 @media (min-width: 640px) {
-	.sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+	.sm\:space-y-0> :not([hidden])~ :not([hidden]) {
 		--tw-space-y-reverse: 0;
 		margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
 		margin-bottom: calc(0px * var(--tw-space-y-reverse));
@@ -1220,7 +1246,7 @@ video {
 }
 
 @media (min-width: 1024px) {
-	.lg\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
+	.lg\:space-y-4> :not([hidden])~ :not([hidden]) {
 		--tw-space-y-reverse: 0;
 		margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
 		margin-bottom: calc(1rem * var(--tw-space-y-reverse));
@@ -1274,18 +1300,19 @@ video {
 }
 
 @media (min-width: 1280px) {
-	.xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+	.xl\:space-y-0> :not([hidden])~ :not([hidden]) {
 		--tw-space-y-reverse: 0;
 		margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
 		margin-bottom: calc(0px * var(--tw-space-y-reverse));
 	}
 
-  .xl\:bg-bottom {
-    background-position: bottom;
-  }
-  .xl\:bg-top{
-    background-position: top;
-  }
+	.xl\:bg-bottom {
+		background-position: bottom;
+	}
+
+	.xl\:bg-top {
+		background-position: top;
+	}
 
 	.xl\:mt-28 {
 		margin-top: 7rem;
@@ -1317,8 +1344,7 @@ video {
 	}
 }
 
-@media (min-width: 1536px) {
-}
+@media (min-width: 1536px) {}
 
 /* top button */
 #topBtn {
@@ -1326,4 +1352,52 @@ video {
 	position: fixed;
 	bottom: 20px;
 	right: 30px;
+}
+
+/* highlight itjobs pic */
+
+.text-btn {
+	position: relative;
+	width: 300px;
+
+}
+
+.image-btn {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	padding: 0;
+	z-index: -3;
+}
+
+.btn {
+	width: 100%;
+	cursor: pointer;
+	--background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+	--border-size: 5px;
+	display: block;
+	margin: 0 auto;
+}
+
+.btn.btn-pop::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: var(--border-size) solid var(--background-color);
+	border-radius: 25px;
+	transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn.btn-pop:hover::before,
+.btn.btn-pop:focus::before {
+	top: calc(var(--border-size) * -2);
+	left: calc(var(--border-size) * -2);
+	right: calc(var(--border-size) * -2);
+	bottom: calc(var(--border-size) * -2);
+	opacity: 0;
+
 }
