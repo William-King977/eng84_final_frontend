@@ -1,8 +1,9 @@
+import csv
 import boto3
+import botocore
 import os
 
 # Changed to os.getenv to return None
-
 AWS_ACCESS = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET = os.getenv('AWS_SECRET_ACCESS_KEY')
 BUCKET = os.getenv('AWS_BUCKET')
@@ -27,3 +28,28 @@ def download_s3_file(*, destination, source=FILEPATH):
     # Changed filename to be included in source path
     # Default value for destination is current dir (?)
     s3.download_file(BUCKET, source, destination)
+
+
+# Returns the file contents from the file that was fetched from S3
+def collect_data():
+    jobs_filename = "ItJobsWatchTop30.csv"
+    # source_path = jobs_filename  # location on S3
+    # local_file_path = jobs_filename  # location to download the file to
+
+    # Fetch the CSV file from S3
+    try:
+        # TODO: check if downloaded correctly
+        download_s3_file(source=jobs_filename, destination=jobs_filename)
+    # Credentials not found, bucket doesn't exist, or file not found
+    except (TypeError, botocore.exceptions.ClientError):
+        print(f"{jobs_filename} can't be located in the S3 bucket or credentials failed. Using local file.")
+    finally:
+        try:
+            with open(jobs_filename, newline='', encoding='ISO-8859-1') as f:
+                reader = csv.reader(f, delimiter=',')
+                context = list(reader)
+        # File cannot be located in the local file path
+        except FileNotFoundError:
+            print('Local file not found.')
+            context = f"{jobs_filename} can't be located in the S3 bucket or your local file path."
+        return context

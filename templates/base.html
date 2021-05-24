@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="static/favicon.jpg" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>SpartaGlobal Engineering84 Final Project</title>
 </head>
 
@@ -37,8 +38,7 @@
                         <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Top 30 IT Jobs</a>
                     </div>
                     <div class="hidden font-medium lg:block">
-                        <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Engineering 84
-                            DevOps</a>
+                        <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Something else</a>
                     </div>
                     <div class="block lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
@@ -56,7 +56,7 @@
                             DevOps Stream Final Project
                         </h1>
                         <p class="max-w-sm text-lg text-gray-700 md:max-w-md md:text-xl">
-                            A fully automated deployment
+                            A fully automated deployment by Engineering 84 Team
                         </p>
                     </div>
                     <button class="
@@ -145,12 +145,82 @@
                 </div>
                 <!-- End Team Member Box -->
             </div>
-        </div>
-        </div>
+            <<<<<<< HEAD </div> </div> </section> <!-- End Our Team Block -->
+
+                {% block body%} {% endblock %}
+                =======
     </section>
     <!-- End Our Team Block -->
+    <section class="py-12 lg:py-16 xl:py-28">
+        <!-- Start Top 30 Jobs Block -->
+        <div id="jobs" class="container mx-auto px-5">
+            <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
+                <div class="space-y-2 lg:space-y-4">
+                    <h2 id class="text-2xl font-black sm:text-3xl">Top 30 Jobs from ITJobsWatch website. </h2>
+                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at
+                        sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>
+                    <a href="#0"
+                        class="block text-blue-500 transition duration-200 hover:text-blue-600 md:text-lg">https://www.itjobswatch.co.uk/</a>
+                </div>
+                <div class="flex flex-col space-y-5 xl:col-span-2">
+                    <div
+                        class="bg-white p-5 rounded-xl shadow space-y-2 cursor-pointer transition duration-200 hover:shadow-lg hover:text-blue-600 md:p-8">
+                        <!-- Start Question -->
+                        <div class="flex justify-between items-center">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Skill / Job Role</th>
+                                        <th scope="col">Rank (Last 6 Months)</th>
+                                        <th scope="col">Rank (Last Year)</th>
+                                        <th scope="col">Median Salary</th>
+                                        <th scope="col">Median Salary (YoY)</th>
+                                        <th scope="col">Historical Job Ads</th>
+                                        <th scope="col">Job Vacancies</th>
+                                    </tr>
+                                </thead>
 
-    {% block body%} {% endblock %}
+                                <tbody>
+                                    <!-- display the error message if it's a string -->
+                                    {% if data is string %}
+                                    <tr>{{ data }} </tr>
+
+                                    <!-- display the jobs if there are no errors -->
+                                    {% else %}
+                                    <!-- display the information -->
+                                    {% for job in data %}
+                                    <tr>
+                                        {% for info in job %}
+                                        <td>{{ info }}</td>
+                                        {% endfor %}
+                                    </tr>
+                                    {% endfor %}
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                            <!--                                <h4 class="font-medium mr-4">Ea numquam aut harum vero et quia expedita et?</h4>-->
+                            <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" /></svg></span>
+                        </div>
+                    </div><!-- End Question -->
+                    <!--                        <div class="bg-white p-5 rounded-xl shadow-lg space-y-2 cursor-pointer transition duration-200 hover:shadow hover:text-blue-600 md:p-8">&lt;!&ndash; Start Question &ndash;&gt;-->
+                    <!--                            <div class="flex justify-between items-center mb-4">-->
+                    <!--                                <h4 class="font-medium mr-4">Lusto laboriosam provident voluptas soluta ipsum nemo molestias?</h4>-->
+                    <!--                                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></span>-->
+                    <!--                            </div>-->
+                    <!--                            <p class="text-gray-600">-->
+                    <!--                                Sed similique non voluptates doloremque aut aut facilis. Aspernatur tempora libero possimus ut non voluptates deleniti rerum. Quasi nulla consectetur rerum eum sed modi tempora dolorem. Voluptas eos qui voluptatem et. Expedita aliquid illo eligendi.-->
+                    <!--                            </p>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Top 30 Jobs  Block -->
+
+    >>>>>>> upstream/dev
 
     <script type="text/javascript" src="../static/styles/index.js"></script>
 </body>
