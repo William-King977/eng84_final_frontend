@@ -52,3 +52,4 @@ function downloadCSV(csv, filename) {
     // Click download link
     downloadLink.click();
 }
+

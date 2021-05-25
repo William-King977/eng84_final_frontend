@@ -1401,3 +1401,21 @@ video {
 	opacity: 0;
 
 }
+.icon-gray {
+	color: rgba(75, 85, 99);
+}
+
+.icon-gray:hover {
+    text-decoration: none !important;
+}
+
+.icon-mid {
+	font-size: 1.5rem !important;
+}
+
+.info-gradient {
+    background-color: rgba(255,255,255,0)
+}
+.info-gradient::hover{
+    background-image: linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0.1) 30%)
+}
