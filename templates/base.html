@@ -169,7 +169,9 @@
                     </h2>
                     <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at
                         sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>
-                    <br>
+                    <br/>
+                    <!-- Button to download the table as a CSV file -->
+                    <button class="btn btn btn-primary" style="width: fit-content; float: left" onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Click to Download</button>
                 </div>
 
                 <div class="flex flex-col space-y-5 xl:col-span-2">
@@ -210,11 +212,11 @@
                                 </tbody>
                             </table>
                             <!--                                <h4 class="font-medium mr-4">Ea numquam aut harum vero et quia expedita et?</h4>-->
-                            <span>
+                            <!-- <span>
                               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                               </svg>
-                            </span>
+                            </span> -->
                         </div>
                     </div><!-- End Question -->
                     <!--                        <div class="bg-white p-5 rounded-xl shadow-lg space-y-2 cursor-pointer transition duration-200 hover:shadow hover:text-blue-600 md:p-8">&lt;!&ndash; Start Question &ndash;&gt;-->
@@ -225,8 +227,6 @@
                     <!--                            <p class="text-gray-600">-->
                     <!--                                Sed similique non voluptates doloremque aut aut facilis. Aspernatur tempora libero possimus ut non voluptates deleniti rerum. Quasi nulla consectetur rerum eum sed modi tempora dolorem. Voluptas eos qui voluptatem et. Expedita aliquid illo eligendi.-->
                     <!--                            </p>-->
-                    <!-- Button to download the table as a CSV file -->
-                    <button onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Download Top 30 Jobs Table</button>
                 </div>
             </div>
         </div>
@@ -235,8 +235,7 @@
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/index.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/paginator.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{
-      url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
     <script type="text/javascript">
       $(document).ready(function(){
       $('#data').after('<div id="nav"></div>');
@@ -246,7 +245,7 @@
       var numPages = rowsTotal/rowsShown;
       for(i = 0;i < numPages;i++) {
           var pageNum = i + 1;
-              $('#plist').append('<li class="page-item"><a class="page-link" href="#" rel="'+i+'">'+pageNum+'</a></li>');
+              $('#plist').append('<li class="page-item"><a class="page-link" rel="'+i+'">'+pageNum+'</a></li>');
       }
       $('#data tbody tr').hide();
       $('#data tbody tr').slice(0, rowsShown).show();
