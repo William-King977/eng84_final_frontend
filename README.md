@@ -31,7 +31,7 @@ The above command will run a localhost server on port 8000 on your machine. To v
 - It's categorised as a micro-framework as it does not require particular tools or libraries to function.
 
 ## MVC
-![MVC](/static/mvc.png)
+![MVC](media/mvc.png)
 
 Parts of Model-view-controller (MVC) were used for this project, which is a software design pattern commonly used for developed user interfaces that divides the related program logic into three interconnected element.
 
