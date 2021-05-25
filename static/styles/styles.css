@@ -1419,3 +1419,7 @@ video {
 .info-gradient::hover{
     background-image: linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0.1) 30%)
 }
+
+.align-center {
+    align-content: center;
+}
