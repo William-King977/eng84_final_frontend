@@ -41,6 +41,7 @@
                         <a href="#home" class="hover:text-blue-600 transition-colors duration-300">Home</a>
                         <a href="#team" class="hover:text-blue-600 transition-colors duration-300">Team</a>
                         <a href="#jobs" class="hover:text-blue-600 transition-colors duration-300">Top IT Jobs</a>
+                        <a href="#tools" class="hover:text-blue-600 transition-colors duration-300">Tools</a>
                     </div>
                     <div class="hidden font-medium lg:block">
                         <!--                        <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Something else</a>-->
@@ -96,10 +97,9 @@
                     </p>
                 </div>
                 <div class=" grid gap-6 grid-cols-2 md:grid-cols-4 lg:gap-10 xl:col-span-2 ">
-                    {% for team in context %}
+                  {% for team in context %}
                     {% for member in team %}
                     <div class="space-y-5">
-
                         <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
                             src={{member.src}} alt="Team Member" />
                         <div class="space-y-1">
@@ -115,8 +115,8 @@
                             -->
 
                         </div>
-                    </div>
-                    {% endfor %}
+                      </div>
+                      {% endfor %}
                     {% endfor %}
 
 
@@ -131,15 +131,7 @@
         <div id="jobs" class="container mx-auto px-5">
             <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
                 <div class="space-y-2 lg:space-y-4">
-                    <!-- <<<<<<< HEAD <h2 class="text-2xl font-black sm:text-3xl">Top 30 Jobs from ITJobsWatch website. </h2>
-                        <!--                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at-->
-                    <!--                        sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>-->
-                    <!-- <br>
-                    <div class='text-btn'>
-                        <a href="https://www.itjobswatch.co.uk/" class='btn btn-pop'>
-                            <img class='image-btn' src="../static/itjoblogo.png" alt="itjobwatch" /> </a>
-                    </div>
-                    ======= -->
+
                     <h2 class="text-2xl font-black sm:text-3xl">
                         Top 30 Jobs from
                         <a href="https://www.itjobswatch.co.uk/"> ITJobsWatch </a>
@@ -151,7 +143,6 @@
                     <!-- Button to download the table as a CSV file -->
                     <button class="btn btn btn-primary" style="width: fit-content; float: left"
                         onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Click to Download</button>
-                    <!-- >>>>>>> upstream/alex_dev -->
                 </div>
 
                 <div class="flex flex-col space-y-5 xl:col-span-2">
@@ -160,7 +151,6 @@
                         <!-- Start Question -->
                         <div class="justify-between items-center">
                             <table id="data" class="table">
-
                                 <thead>
                                     <tr>
                                         <th scope="col">Skill / Job Role</th>
@@ -193,78 +183,30 @@
                             </table>
                         </div>
                     </div><!-- End Question -->
-                    <!--                        <div class="bg-white p-5 rounded-xl shadow-lg space-y-2 cursor-pointer transition duration-200 hover:shadow hover:text-blue-600 md:p-8">&lt;!&ndash; Start Question &ndash;&gt;-->
-                    <!--                            <div class="flex justify-between items-center mb-4">-->
-                    <!--                                <h4 class="font-medium mr-4">Lusto laboriosam provident voluptas soluta ipsum nemo molestias?</h4>-->
-                    <!--                                <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg></span>-->
-                    <!--                            </div>-->
-                    <!--                            <p class="text-gray-600">-->
-                    <!--                                Sed similique non voluptates doloremque aut aut facilis. Aspernatur tempora libero possimus ut non voluptates deleniti rerum. Quasi nulla consectetur rerum eum sed modi tempora dolorem. Voluptas eos qui voluptatem et. Expedita aliquid illo eligendi.-->
-                    <!--                            </p>-->
+
                 </div>
             </div>
         </div>
     </section><!-- End Top 30 Jobs  Block -->
 
-    <!-- footer -->
-    <!-- Site footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the
-                        upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or
-                        snippets as the code wants to be simple. We will help programmers build up concepts in different
-                        programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android,
-                        SQL and Algorithm.</p>
-                </div>
+    <div class="border-t border-gray-100"></div>
 
-                <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                    </ul>
-                </div>
+        <section class="py-12 lg:py-16 xl:py-28 bg-gray-100"><!-- Start How It Works Block -->
+            <div id="tools" class="container mx-auto px-5">
+                <div class="flex justify-between gap-6 lg:gap-10 xl:grid-cols-3">
+                    <div class="space-y-2 lg:space-y-4">
+                      <img src="../static/final_tools_bannner.png" alt=""  />
+                    </div>
+                    <div class="space-y-2 lg:space-y-4 align-center">
 
-                <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-                    </ul>
+                        <h2 class="text-2xl font-black sm:text-3xl">Tools we used</h2>
+                        <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Our teams have used different tools to perform their tasks.</p>
+                    </div>
                 </div>
             </div>
-            <hr>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                        <a href="#">Scanfcode</a>.
-                    </p>
-                </div>
+        </section><!-- End How It Works Block -->
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    {% include 'footer.html' %}
 
     {% include "scripts.html" %}
 

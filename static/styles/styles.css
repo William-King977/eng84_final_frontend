@@ -1401,7 +1401,6 @@ video {
 	opacity: 0;
 
 }
-
 .icon-gray {
 	color: rgba(75, 85, 99);
 }
@@ -1415,6 +1414,7 @@ video {
 }
 
 .info-gradient {
+<<<<<<< HEAD
 	background-color: rgba(255, 255, 255, 0)
 }
 
@@ -1589,4 +1589,12 @@ video {
 		margin-right: 0;
 		font-weight: 600
 	}
+}
+
+.info-gradient::hover{
+    background-image: linear-gradient(to top, rgba(255,255,255,1) 10%, rgba(255,255,255,0.1) 30%)
+}
+
+.align-center {
+    align-content: center;
 }

@@ -15,7 +15,7 @@ def collect_data_url():
         context = list(reader)[0:30]
     # If the file can't be found (no response from the URL)
     else:
-        context = "The file can't be located in the S3 bucket."
+        context = "The file can't be located in the S3 bucket, or permissions denied."
     return context
 
 

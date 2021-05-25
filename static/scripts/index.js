@@ -21,7 +21,7 @@ function topFunction() {
 // Converts the table into a list of values
 function exportTableToCSV(filename) {
     var csv = [];
-    var rows = document.getElementById("jobs-table").rows;
+    var rows = document.getElementById("data").rows;
     for (var i = 0; i < rows.length; i++) {
         var row = []
         var cols = rows[i].querySelectorAll("td, th");
@@ -35,12 +35,8 @@ function exportTableToCSV(filename) {
 
 // Converts list into a CSV file
 function downloadCSV(csv, filename) {
-    var csvFile;
-    var downloadLink;
-    // CSV file
-    csvFile = new Blob(["\ufeff" + csv], {type: "text/csv"});
-    // Download link
-    downloadLink = document.createElement("a");
+    var csvFile = csvFile = new Blob(["\ufeff" + csv], {type: "text/csv"});
+    var downloadLink = downloadLink = document.createElement("a");
     // File name
     downloadLink.download = filename;
     // Create a link to the file
