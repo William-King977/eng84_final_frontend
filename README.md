@@ -4,10 +4,11 @@
 
 ## Introduction
 The aim of this project is to create a simple service that can scrape useful data from ITJobswatch website and display the current top 30 jobs.
-The app is written in Python 3 with Flask microframework. We decided to create one-page website which is divided into three sections:
+The app is written in Python 3 with Flask microframework. We decided to create one-page website which is divided into four sections:
 - Home
 - Our Team
 - Top 30 Jobs
+- Tools
 
 ## Documentation
 Requirements:
