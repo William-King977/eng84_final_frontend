@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>SpartaGlobal Engineering84 Final Project</title>
 </head>
 
@@ -35,11 +39,11 @@
                     </div>
                     <div class="hidden space-x-8 font-medium lg:block">
                         <a href="#home" class="hover:text-blue-600 transition-colors duration-300">Home</a>
-                        <a href="#team" class="hover:text-blue-600 transition-colors duration-300">Our Team</a>
-                        <a href="#jobs" class="hover:text-blue-600 transition-colors duration-300">Top 30 IT Jobs</a>
+                        <a href="#team" class="hover:text-blue-600 transition-colors duration-300">Team</a>
+                        <a href="#jobs" class="hover:text-blue-600 transition-colors duration-300">Top IT Jobs</a>
                     </div>
                     <div class="hidden font-medium lg:block">
-<!--                        <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Something else</a>-->
+                        <!--                        <a href="#0" class="hover:text-blue-600 transition-colors duration-300">Something else</a>-->
                     </div>
                     <div class="block lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
@@ -92,54 +96,27 @@
                     </p>
                 </div>
                 <div class=" grid gap-6 grid-cols-2 md:grid-cols-4 lg:gap-10 xl:col-span-2 ">
-                    {% for member in context.front %}
+                    {% for team in context %}
+                    {% for member in team %}
                     <div class="space-y-5">
+
                         <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                            src={{member.src}} alt="Team Member 1" />
+                            src={{member.src}} alt="Team Member" />
                         <div class="space-y-1">
                             <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
                             <p class="text-gray-600">{{member.role}}</p>
-                            <a href="{{member.github}}" class="fa fa-github font-medium lg:text-lg"
+                            <a href="{{member.github}}" class="fa fa-github icon-gray icon-mid"></a>
+                            <a href="{{member.linkedin}}" class="fa fa-linkedin-square icon-gray icon-mid"></a>
+                            <!--
+                            <a href="{{member.github}}" class="fa fa-github font-medium lg:text-lg icon-gray"
                                 style="font-size:2rem; margin-right:1rem; "></a>
-                            <a href="{{member.linkedin}}" class="fa fa-linkedin-square" style="font-size:2rem;
+                            <a href="{{member.linkedin}}" class="fa fa-linkedin-square icon-gray" style="font-size:2rem;
                                 color:#2867B2;  "></a>
+                            -->
 
                         </div>
                     </div>
-
                     {% endfor %}
-
-                    {% for member in context.auto %}
-                    <div class="space-y-5">
-                        <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                            src={{member.src}} alt="Team Member 1" />
-                        <div class="space-y-1">
-                            <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
-                            <p class="text-gray-600">{{member.role}}</p>
-                            <a href="{{member.github}}" class="fa fa-github font-medium lg:text-lg"
-                                style="font-size:2rem; margin-right:1rem; "></a>
-                            <a href="{{member.linkedin}}" class="fa fa-linkedin-square" style="font-size:2rem;
-                                color:#2867B2;  "></a>
-
-                        </div>
-                    </div>
-
-                    {% endfor %}
-
-                    {% for member in context.test %}
-                    <div class="space-y-5">
-                        <img class=" rounded-xl shadow transition-shadow duration-200 hover:shadow-lg "
-                            src={{member.src}} alt="Team Member 1" />
-                        <div class="space-y-1">
-                            <h4 class="font-medium lg:text-lg">{{member.name}}</h4>
-                            <p class="text-gray-600">{{member.role}}</p>
-                            <a href="{{member.github}}" class="fa fa-github font-medium lg:text-lg"
-                                style="font-size:2rem; margin-right:1rem; "></a>
-                            <a href="{{member.linkedin}}" class="fa fa-linkedin-square" style="font-size:2rem;
-                                color:#2867B2;  "></a>
-                        </div>
-                    </div>
-
                     {% endfor %}
 
 
@@ -154,22 +131,36 @@
         <div id="jobs" class="container mx-auto px-5">
             <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
                 <div class="space-y-2 lg:space-y-4">
-                    <h2 class="text-2xl font-black sm:text-3xl">Top 30 Jobs from ITJobsWatch website. </h2>
-<!--                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at-->
-<!--                        sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>-->
-                    <br>
+                    <!-- <<<<<<< HEAD <h2 class="text-2xl font-black sm:text-3xl">Top 30 Jobs from ITJobsWatch website. </h2>
+                        <!--                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">Quo et iste sint sint nostrum et at-->
+                    <!--                        sapiente architecto. Minus autem eum sit illo corrupti est ea ut eaque.</p>-->
+                    <!-- <br>
                     <div class='text-btn'>
                         <a href="https://www.itjobswatch.co.uk/" class='btn btn-pop'>
                             <img class='image-btn' src="../static/itjoblogo.png" alt="itjobwatch" /> </a>
                     </div>
+                    ======= -->
+                    <h2 class="text-2xl font-black sm:text-3xl">
+                        Top 30 Jobs from
+                        <a href="https://www.itjobswatch.co.uk/"> ITJobsWatch </a>
+                        website.
+                    </h2>
+                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">We are gathering data in real time
+                        from the ITJobsWatch website and presenting them right here.</p>
+                    <br />
+                    <!-- Button to download the table as a CSV file -->
+                    <button class="btn btn btn-primary" style="width: fit-content; float: left"
+                        onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Click to Download</button>
+                    <!-- >>>>>>> upstream/alex_dev -->
                 </div>
 
                 <div class="flex flex-col space-y-5 xl:col-span-2">
                     <div
                         class="bg-white p-5 rounded-xl shadow space-y-2 cursor-pointer transition duration-200 hover:shadow-lg md:p-8">
                         <!-- Start Question -->
-                        <div class="flex justify-between items-center">
-                            <table id="jobs-table" class="table">
+                        <div class="justify-between items-center">
+                            <table id="data" class="table">
+
                                 <thead>
                                     <tr>
                                         <th scope="col">Skill / Job Role</th>
@@ -200,11 +191,6 @@
                                     {% endif %}
                                 </tbody>
                             </table>
-                            <!--                                <h4 class="font-medium mr-4">Ea numquam aut harum vero et quia expedita et?</h4>-->
-                            <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7" /></svg></span>
                         </div>
                     </div><!-- End Question -->
                     <!--                        <div class="bg-white p-5 rounded-xl shadow-lg space-y-2 cursor-pointer transition duration-200 hover:shadow hover:text-blue-600 md:p-8">&lt;!&ndash; Start Question &ndash;&gt;-->
@@ -215,14 +201,73 @@
                     <!--                            <p class="text-gray-600">-->
                     <!--                                Sed similique non voluptates doloremque aut aut facilis. Aspernatur tempora libero possimus ut non voluptates deleniti rerum. Quasi nulla consectetur rerum eum sed modi tempora dolorem. Voluptas eos qui voluptatem et. Expedita aliquid illo eligendi.-->
                     <!--                            </p>-->
-                    <!-- Button to download the table as a CSV file -->
-                    <button onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Download Top 30 Jobs Table</button>
                 </div>
             </div>
         </div>
     </section><!-- End Top 30 Jobs  Block -->
 
-    <script type="text/javascript" src="../static/styles/index.js"></script>
+    <!-- footer -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the
+                        upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or
+                        snippets as the code wants to be simple. We will help programmers build up concepts in different
+                        programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android,
+                        SQL and Algorithm.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                        <a href="#">Scanfcode</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    {% include "scripts.html" %}
+
 </body>
 
 </html>

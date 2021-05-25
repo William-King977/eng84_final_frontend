@@ -26,7 +26,7 @@ python app.py
 The above command will run a localhost server on port 8000 on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
 
 ## MVC
-![img.png](img.png)
+![MVC](mvc.png)
 
 Parts of Model-view-controller (MVC) were used for this project, which is a software design pattern commonly used for developed user interfaces that divides the related program logic into three interconnected element.
 
