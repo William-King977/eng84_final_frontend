@@ -25,6 +25,15 @@ python app.py
 
 The above command will run a localhost server on port 8000 on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
 
+## MVC
+![img.png](img.png)
+
+Parts of Model-view-controller (MVC) were used for this project, which is a software design pattern commonly used for developed user interfaces that divides the related program logic into three interconnected element.
+
+## Structure
+- The `static` folder to store stylesheets, javascript files and images.
+- The `templates` folder to store the visual representation such as template HTML files.
+- `app.py` file which works as the controller with Flask microframework. The app will utilize the Mode-View-Controller design pattern in the back-end to handle requests and distribute responses to the end user.
 
 ## Styles and libraries
 - Style formatting has been added to the HTML structure using CSS and JS. 
