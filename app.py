@@ -18,7 +18,7 @@ def index():
 
     # Fetch the data from S3
     data = data_collector.collect_data_url()
-    return render_template("home.html", context=context, data=data)
+    return render_template("home.html", context=list(team.team.values()), data=data)
 
 
 if __name__ == "__main__":
