@@ -55,14 +55,22 @@ The application tries to get a data file from an S3 bucket. To get the data, the
 
 ## Main functionality
 
-Environment variable credentials were used to connect to S3 
+
+Part of `data_collector.py`code which collects CSV file from the S3 bucket.  
+It will raise an error if the file is not found
 ```
-s3 = boto3.client(
-    's3',
-    aws_access_key_id=AWS_ACCESS,
-    aws_secret_access_key=AWS_SECRET,
-)
+def collect_data_url():
+    s3_request = requests.get(S3_FILE_URL)
+
+    if s3_request: 
+        s3_content = s3_request.content.decode('ISO-8859-1')
+        reader = csv.reader(s3_content.splitlines(), delimiter=',')
+        context = list(reader)[0:30]
+    else:
+        context = "The file can't be located in the S3 bucket, or permissions denied."
+    return context
 ```
+
 
 Part of the script from `app.py` To collect data from the Aamazon S3 bucket. 
 ```
