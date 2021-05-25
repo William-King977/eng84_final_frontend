@@ -10,7 +10,8 @@ def collect_data_url():
 
     # If the file is found.
     if s3_request: 
-        s3_content = s3_request.content.decode('ISO-8859-1')
+        # s3_content = s3_request.content.decode('ISO-8859-1')
+        s3_content = s3_request.content.decode('utf-8')
         reader = csv.reader(s3_content.splitlines(), delimiter=',')
         context = list(reader)[0:30]
     # If the file can't be found (no response from the URL)
