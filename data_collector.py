@@ -23,7 +23,7 @@ def collect_data_url():
 # Fetch the CSV file from the local machine
 def collect_data_local():
     try:
-        with open(JOBS_FILENAME, newline='', encoding='ISO-8859-1') as f:
+        with open(JOBS_FILENAME, newline='', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=',')
             context = list(reader)[0:30]
     # File cannot be located in the local file path
