@@ -1706,10 +1706,11 @@ a:hover {
 	width: 300px;
 	margin: -100px 0 0 0;
 	padding: 50px;
-	padding-top: 125px;
+	padding-top: 90px;
 	right: -100px;
 
-	background: #ededed;
+	/* background: #ededed; */
+	background-color: #FBFBFB;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
 	/* to stop flickering of text in safari */
