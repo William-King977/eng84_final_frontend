@@ -82,8 +82,8 @@ Part of the script from `app.py` To collect data from the Aamazon S3 bucket.
 ## Our Website
 Tools we used for this project, seperated into three groups, each team used different tool set.   
 
-![Tools](media/tools.png)
+![Tools](media/tools.PNG)
 
 The IT Jobs section, which displays current top 30 IT Jobs from the ITJobsWatch website.   
 
-![Jobs](media/30jobs.png)
+![Jobs](media/30jobs.PNG)
