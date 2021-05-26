@@ -10,11 +10,10 @@ The app is written in Python 3 with Flask microframework. We decided to create o
 - Top 30 Jobs
 - Tools
 
-## Documentation
-Requirements:
+## Pre-Requirements:
 - Python 3.x+
 
-Make sure the requirements are installed in your Python environment (or virtual environment):
+Make sure the requirements are installed in your Python environment (or virtual environment). To install the requirements run the command below:
 ```
 python -m pip install -r requirements.txt
 ```
@@ -24,7 +23,7 @@ To run the application:
 python app.py
 ```
 
-The above command will run a localhost server on port 8000 on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
+The above command will run a localhost server on `port 8000` on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
 
 
 ## Flask
@@ -39,11 +38,12 @@ Parts of Model-view-controller (MVC) were used for this project, which is a soft
 ## Structure
 - The `static` folder to store stylesheets, javascript files and images.
 - The `templates` folder to store the visual representation such as template HTML files.
-- `app.py` file which works as the controller with Flask microframework. The app will utilize the Mode-View-Controller design pattern in the back-end to handle requests and distribute responses to the end user.
+- `app.py` file which works as the controller with Flask microframework. The app will utilize the Mode-View-Controller design pattern in the back-end to handle requests and distribute responses to the end user. There is also `data_colector.py` file which collects CSV file from a Amazon S3 bucket. 
 
 ## Styles and libraries
 - Style formatting has been added to the HTML structure using CSS and JS. 
 - Jinja2 template library
+
 
 ## Environment variables
 The application tries to get a data file from an S3 bucket. To get the data, the `boto3` module is used. However, the module requires some environment variables to be set in order to work correctly. Specifically:
@@ -78,3 +78,12 @@ Part of the script from `app.py` To collect data from the Aamazon S3 bucket.
     data = s3_boto3.collect_data()
     return render_template("home.html", context=context, data=data)  
 ```
+
+## Our Website
+Tools we used for this project, seperated into three groups, each team used different tool set.   
+
+![Tools](media/tools.png)
+
+The IT Jobs section, which displays current top 30 IT Jobs from the ITJobsWatch website.   
+
+![Jobs](media/30jobs.png)
