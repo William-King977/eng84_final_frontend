@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('#data').after('<div id="nav"></div>');
   $('#nav').after('<ul id="plist" class="pagination"></ul>')
-  var rowsShown = 4;
+  var rowsShown = 6;
   var rowsTotal = $('#data tbody tr').length;
   var numPages = rowsTotal/rowsShown;
   for(i = 0;i < numPages;i++) {

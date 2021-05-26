@@ -173,64 +173,73 @@
 
     <section class="py-12 lg:py-16 xl:py-28">
         <!-- Start Top 30 Jobs Block -->
-        <div id="jobs" class="container mx-auto px-5">
-            <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
-                <div class="space-y-2 lg:space-y-4">
+        <!-- test -->
+        <div class="wrap" style="
+    width: 80%;
+    margin: 0 auto;
+            ">
+            <!-- end test -->
+            <div id="jobs" class="container-fluid px-5">
+                <!-- <div id="jobs" class="container mx-auto px-5"> -->
+                <div class="grid gap-6 lg:gap-10 xl:grid-cols-3">
+                    <div class="space-y-2 lg:space-y-4">
 
-                    <h2 class="text-2xl font-black sm:text-3xl">
-                        Top 30 Jobs from
-                        <a href="https://www.itjobswatch.co.uk/"> ITJobsWatch </a>
-                        website.
-                    </h2>
-                    <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">We are gathering data in real time
-                        from the ITJobsWatch website and presenting them right here.</p>
-                    <br />
-                    <!-- Button to download the table as a CSV file -->
-                    <button class="btn btn btn-primary" style="width: fit-content; float: left"
-                        onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Click to Download</button>
-                </div>
+                        <h2 class="text-2xl font-black sm:text-3xl">
+                            Top 30 Jobs from
+                            <a href="https://www.itjobswatch.co.uk/"> ITJobsWatch </a>
+                            website.
+                        </h2>
+                        <p class="w-full sm:w-1/2 xl:w-80 text-gray-600 md:text-lg">We are gathering data in real time
+                            from the ITJobsWatch website and presenting them right here.</p>
+                        <br />
+                        <!-- Button to download the table as a CSV file -->
+                        <button class="btn btn btn-primary" style="width: fit-content; float: left"
+                            onclick="exportTableToCSV('ITJobsWatchTop30.csv')">Click to Download</button>
+                    </div>
 
-                <div class="flex flex-col space-y-5 xl:col-span-2">
-                    <div
-                        class="bg-white p-5 rounded-xl shadow space-y-2 cursor-pointer transition duration-200 hover:shadow-lg md:p-8">
-                        <!-- Start Question -->
-                        <div class="justify-between items-center">
-                            <table id="data" class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Skill / Job Role</th>
-                                        <th scope="col">Rank (Last 6 Months)</th>
-                                        <th scope="col">Rank (Last Year)</th>
-                                        <th scope="col">Median Salary</th>
-                                        <th scope="col">Median Salary (YoY)</th>
-                                        <th scope="col">Historical Job Ads</th>
-                                        <th scope="col">Job Vacancies</th>
-                                    </tr>
-                                </thead>
+                    <div class="flex flex-col space-y-5 xl:col-span-2">
+                        <div
+                            class="bg-white p-5 rounded-xl shadow space-y-2 cursor-pointer transition duration-200 hover:shadow-lg md:p-8">
+                            <!-- Start Question -->
+                            <div class="justify-between items-center">
+                                <table id="data" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Skill / Job Role</th>
+                                            <th scope="col">Rank (Last 6 Months)</th>
+                                            <th scope="col">Rank (Last Year)</th>
+                                            <th scope="col">Median Salary</th>
+                                            <th scope="col">Median Salary (YoY)</th>
+                                            <th scope="col">Historical Job Ads</th>
+                                            <th scope="col">Job Vacancies</th>
+                                        </tr>
+                                    </thead>
 
-                                <tbody>
-                                    <!-- display the error message if it's a string -->
-                                    {% if data is string %}
-                                    <tr>{{ data }} </tr>
+                                    <tbody>
+                                        <!-- display the error message if it's a string -->
+                                        {% if data is string %}
+                                        <tr>{{ data }} </tr>
 
-                                    <!-- display the jobs if there are no errors -->
-                                    {% else %}
-                                    <!-- display the information -->
-                                    {% for job in data %}
-                                    <tr>
-                                        {% for info in job %}
-                                        <td>{{ info }}</td>
+                                        <!-- display the jobs if there are no errors -->
+                                        {% else %}
+                                        <!-- display the information -->
+                                        {% for job in data %}
+                                        <tr>
+                                            {% for info in job %}
+                                            <td>{{ info }}</td>
+                                            {% endfor %}
+                                        </tr>
                                         {% endfor %}
-                                    </tr>
-                                    {% endfor %}
-                                    {% endif %}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div><!-- End Question -->
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- End Question -->
 
+                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </section><!-- End Top 30 Jobs  Block -->
 
