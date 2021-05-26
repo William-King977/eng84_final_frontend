@@ -1,5 +1,4 @@
-
-  $(document).ready(function(){
+$(document).ready(function(){
   $('#data').after('<div id="nav"></div>');
   $('#nav').after('<ul id="plist" class="pagination"></ul>')
   var rowsShown = 4;
@@ -11,11 +10,11 @@
   }
   $('#data tbody tr').hide();
   $('#data tbody tr').slice(0, rowsShown).show();
-  $('#plist a:first').addClass('active');
+  $('#plist li:first').addClass('active');
   $('#plist a').bind('click', function(){
 
-      $('#plist a').removeClass('active');
-      $(this).addClass('active');
+      $('#plist li').removeClass('active');
+      $(this).parent('li').addClass('active');
       var currPage = $(this).attr('rel');
       var startItem = currPage * rowsShown;
       var endItem = startItem + rowsShown;
