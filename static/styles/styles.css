@@ -745,6 +745,13 @@ video {
 	width: 100%;
 }
 
+/* fixed table overflow */
+th {
+	vertical-align: middle !important;
+	border-bottom: 2px solid #dee2e6;
+	width: 150px !important;
+}
+
 .grid {
 	display: grid;
 }
