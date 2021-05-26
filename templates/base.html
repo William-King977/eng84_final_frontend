@@ -16,6 +16,12 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.24.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-confetti@1.9.1"></script>
+
+
     <title>SpartaGlobal Engineering84 Final Project</title>
 </head>
 
@@ -101,7 +107,7 @@
                             A fully automated deployment by Engineering 84 Team
                         </p>
                     </div>
-                    <button class="
+                    <button type="button" id="party" class="
                                 w-full
                                 px-8
                                 py-3.5
@@ -114,9 +120,11 @@
                                 font-semibold
                                 rounded-lg
                                 sm:w-auto
+                                
                             ">
-                        View our services
+                        Push me to celebrate a WoW moment
                     </button>
+                    <div style="z-index: 1;" id="tsparticles"></div>
                 </div>
             </div>
         </div>
