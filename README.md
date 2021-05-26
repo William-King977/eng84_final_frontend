@@ -3,8 +3,7 @@
 > Dev branch
 
 ## Introduction
-The aim of this project is to create a simple service that can scrape useful data from ITJobswatch website and display the current top 30 jobs.
-The app is written in Python 3 with Flask microframework. We decided to create one-page website which is divided into four sections:
+The aim of this project is to create a simple service that can scrape useful data from ITJobswatch website and display the current top 30 jobs. The app is written in Python 3 with the Flask microframework. We decided to create a one-page website which is divided into four sections:
 - Home
 - Our Team
 - Top 30 Jobs
@@ -28,7 +27,7 @@ The above command will run a localhost server on `port 8000` on your machine. To
 
 ## Flask
 - Flask is a lightweight WSGI web application framework designed to help developers get started with their web applications quickly and easily with the ability to scale up to complex applications.
-- It's categorised as a micro-framework as it does not require particular tools or libraries to function.
+- It's categorised as a microframework as it does not require particular tools or libraries to function.
 
 ## MVC
 ![MVC](media/mvc.png)
@@ -36,28 +35,23 @@ The above command will run a localhost server on `port 8000` on your machine. To
 Parts of Model-view-controller (MVC) were used for this project, which is a software design pattern commonly used for developed user interfaces that divides the related program logic into three interconnected element.
 
 ## Structure
-- The `static` folder to store stylesheets, javascript files and images.
+- The `static` folder to store style sheets, JavaScript files and images.
 - The `templates` folder to store the visual representation such as template HTML files.
-- `app.py` file which works as the controller with Flask microframework. The app will utilize the Mode-View-Controller design pattern in the back-end to handle requests and distribute responses to the end user. There is also `data_colector.py` file which collects CSV file from a Amazon S3 bucket. 
+- `app.py` file which works as the controller with Flask microframework. The app will utilize the Model-View-Controller design pattern in the back-end to handle requests and distribute responses to the end user. There is also a `data_colector.py` file which collects CSV file from an Amazon S3 bucket. 
 
 ## Styles and libraries
-- Style formatting has been added to the HTML structure using CSS and JS. 
+- Style formatting has been added to the HTML structure using CSS and JS
 - Jinja2 template library
 
-
-
-
 ## Main functionality
-
-
-Part of `data_collector.py`code which collects CSV file from the S3 bucket.  
-It will raise an error if the file is not found
+- Part of `data_collector.py` code which collects the CSV file from the S3 bucket
+- It will raise an error if the file is not found
 ```
 def collect_data_url():
     s3_request = requests.get(S3_FILE_URL)
 
     if s3_request: 
-        s3_content = s3_request.content.decode('ISO-8859-1')
+        s3_content = s3_request.content.decode('utf-8')
         reader = csv.reader(s3_content.splitlines(), delimiter=',')
         context = list(reader)[0:30]
     else:
@@ -66,14 +60,14 @@ def collect_data_url():
 ```
 
 
-Part of the script from `app.py` To collect data from the Aamazon S3 bucket. 
+Part of the script from `app.py` to collect data from the Amazon S3 bucket. 
 ```
-    data = s3_boto3.collect_data()
-    return render_template("home.html", context=context, data=data)  
+data = data_collector.collect_data_url()
+return render_template("home.html", context=list(team.team.values()), data=data)
 ```
 
 ## Our Website
-Tools we used for this project, seperated into three groups, each team used different tool set.   
+Tools we used for this project, separated into three groups, each team used a different tool set.   
 
 ![Tools](media/tools.PNG)
 
