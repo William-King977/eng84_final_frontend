@@ -11,6 +11,7 @@ The aim of this project is to create a simple service that can scrape useful dat
 
 ## Pre-Requirements:
 - Python 3.x+
+- Docker
 
 Make sure the requirements are installed in your Python environment (or virtual environment). To install the requirements run the command below:
 ```
