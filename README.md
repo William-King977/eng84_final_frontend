@@ -22,8 +22,9 @@ To run the application:
 ```
 python app.py
 ```
-
 The above command will run a localhost server on `port 8000` on your machine. To view the app, open any browser and enter `127.0.0.1:8000` or `localhost:8000` as the URL.
+
+Alternatively, a docker image can be build based on the Dockerfile. The application can then be run with `docker run -d -p 8000:8000 <image>`
 
 
 ## Flask
